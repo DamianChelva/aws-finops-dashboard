@@ -162,9 +162,9 @@ class ExportHandler:
         try:
             from slack_sdk import WebClient
             from slack_sdk.errors import SlackApiError
-        except ImportError as e:
+        except ImportError:
             console.print(
-                f"[bold red]Error: slack-sdk not installed. Please install it with: pip install slack-sdk[/]"
+                "[bold red]Error: slack-sdk not installed. Please install it with: pip install slack-sdk[/]"
             )
             return None
 
